@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Environments
+.env
+.venv
+env/
+venv/
+
+# Editors
+.idea/
+.vscode
+
+# ROS2 / colcon
+build/
+install/
+log/
+
+# MuJoCo
+MUJOCO_LOG.TXT
+
+# Misc
+*.tmp
+/tmp/

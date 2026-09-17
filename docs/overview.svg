@@ -1,0 +1,40 @@
+<svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <title>Overview</title>
+  <defs>
+    <filter id="sketchy" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.009 0.013" numOctaves="2" seed="11" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="26" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <marker id="arrow-end" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M1,1 L11,6 L1,11 Z" fill="#666666"/>
+    </marker>
+  </defs>
+
+  <!-- ink layer: edges get the hand-drawn wobble -->
+  <g filter="url(#sketchy)">
+    <!-- controller -> sim : low_cmd -->
+    <path d="M430,120 L570,120" fill="none" stroke="#666666" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-end)"/>
+    <!-- sim -> controller : low_state / imu -->
+    <path d="M570,180 L430,180" fill="none" stroke="#666666" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-end)"/>
+  </g>
+
+  <!-- node layer: regular, un-distorted shapes -->
+  <g>
+    <rect x="60" y="70" width="370" height="160" rx="18" fill="#f7f7f5" stroke="#666666" stroke-width="2.5" stroke-dasharray="2 8"/>
+    <rect x="570" y="70" width="370" height="160" rx="18" fill="#e9f0fb" stroke="#666666" stroke-width="3.5"/>
+  </g>
+
+  <!-- label layer: kept crisp, no wobble -->
+  <g fill="#1f1f1f" text-anchor="middle">
+    <text x="245" y="55" font-size="14" font-style="italic">another repository</text>
+    <text x="245" y="140" font-size="19" font-weight="bold">motion_intelligence</text>
+    <text x="245" y="168" font-size="15">(honor_rl_deploy)</text>
+
+    <text x="755" y="55" font-size="14" font-style="italic">this repository</text>
+    <text x="755" y="135" font-size="20">🖥️ MuJoCo sim</text>
+    <text x="755" y="163" font-size="15">run_mujoco.py + ros2_bridge.py</text>
+
+    <text x="500" y="105" font-size="14">low_cmd</text>
+    <text x="500" y="205" font-size="14">low_state / imu</text>
+  </g>
+</svg>
