@@ -90,3 +90,7 @@ The elastic band is a virtual spring that holds the robot up while you tune a po
     └── robots_assets/
         └── vita_boy/vita_boy1.0/     # scene XML and meshes
 ```
+
+## 📄 License
+
+This project is licensed under the [Apache License 2.0](LICENSE).

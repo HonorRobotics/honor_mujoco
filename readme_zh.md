@@ -90,3 +90,7 @@ source ./scripts/build_sdk_msgs.sh --honor-sdk /your_path/to_sdk
     └── robots_assets/
         └── vita_boy/vita_boy1.0/     # 场景 XML 和网格模型
 ```
+
+## 📄 许可证
+
+本项目基于 [Apache License 2.0](LICENSE) 开源。
